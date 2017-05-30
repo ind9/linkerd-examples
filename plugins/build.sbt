@@ -26,3 +26,22 @@ val headerClassifier =
         Nil,
       assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false)
     )
+
+val marathonNamer =
+  project.in(file("marathon-namer")).
+    settings(
+      scalaVersion := "2.12.1",
+      organization := "io.buoyant",
+      name := "marathon-namer",
+      resolvers ++= Seq(
+        "twitter" at "https://maven.twttr.com",
+        "local-m2" at ("file:" + Path.userHome.absolutePath + "/.m2/repository")
+      ),
+      libraryDependencies ++=
+        finagle("http") % "provided" ::
+          twitterUtil("core") % "provided" ::
+          linkerd("core") % "provided" ::
+          linkerd("protocol-http") % "provided" ::
+          Nil,
+      assemblyOption in assembly := (assemblyOption in assembly).value.copy(includeScala = false)
+    )
