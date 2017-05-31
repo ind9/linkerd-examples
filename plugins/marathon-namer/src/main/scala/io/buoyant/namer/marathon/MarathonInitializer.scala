@@ -15,8 +15,8 @@ import io.buoyant.namer.{NamerConfig, NamerInitializer}
   *
   * <pre>
   * namers:
-  * - kind:           io.buoyant.marathon
-  *   prefix:         /io.buoyant.marathon
+  * - kind:           io.buoyant.marathonHostNamer
+  *   prefix:         /io.buoyant.marathonHostNamer
   *   host:           marathon.mesos
   *   port:           80
   *   uriPrefix:      /marathon
