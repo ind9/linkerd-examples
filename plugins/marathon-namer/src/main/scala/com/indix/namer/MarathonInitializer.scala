@@ -24,12 +24,12 @@ import io.buoyant.namer.{NamerConfig, NamerInitializer}
   *   useHealthCheck: false
   * </pre>
   */
-class Marathon2Initializer extends NamerInitializer {
+class MarathonInitializer extends NamerInitializer {
   val configClass = classOf[MarathonConfig]
   override def configId = "io.buoyant.marathonHostNamer"
 }
 
-object Marathon2Initializer extends Marathon2Initializer
+object MarathonInitializer extends MarathonInitializer
 
 object MarathonConfig {
   private val DefaultHost = "marathon.mesos"

@@ -31,7 +31,7 @@ val marathonNamer =
   project.in(file("marathon-namer")).
     settings(
       scalaVersion := "2.12.1",
-      organization := "io.buoyant",
+      organization := "com.indix",
       name := "marathon-namer",
       resolvers ++= Seq(
         "twitter" at "https://maven.twttr.com",
