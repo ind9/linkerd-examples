@@ -1,4 +1,4 @@
-package io.buoyant.namer.marathon
+package com.indix.namer.marathon
 
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.{DeserializationFeature, ObjectMapper}

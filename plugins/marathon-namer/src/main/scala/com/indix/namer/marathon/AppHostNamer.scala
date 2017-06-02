@@ -1,4 +1,4 @@
-package io.buoyant.namer.marathon
+package com.indix.namer.marathon
 
 import com.twitter.finagle._
 import com.twitter.finagle.util.DefaultTimer

@@ -1,4 +1,4 @@
-package io.buoyant.namer.marathon
+package com.indix.namer.marathon
 
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.twitter.conversions.time._
@@ -15,8 +15,8 @@ import io.buoyant.namer.{NamerConfig, NamerInitializer}
   *
   * <pre>
   * namers:
-  * - kind:           io.buoyant.marathonHostNamer
-  *   prefix:         /io.buoyant.marathonHostNamer
+  * - kind:           com.indix.namer.marathon.marathonHostNamer
+  *   prefix:         /com.indix.namer.marathon.marathonHostNamer
   *   host:           marathon.mesos
   *   port:           80
   *   uriPrefix:      /marathon
@@ -26,7 +26,7 @@ import io.buoyant.namer.{NamerConfig, NamerInitializer}
   */
 class MarathonInitializer extends NamerInitializer {
   val configClass = classOf[MarathonConfig]
-  override def configId = "io.buoyant.marathonHostNamer"
+  override def configId = "com.indix.namer.marathon.marathonHostNamer"
 }
 
 object MarathonInitializer extends MarathonInitializer
