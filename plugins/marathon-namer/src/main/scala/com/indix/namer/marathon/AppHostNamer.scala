@@ -38,7 +38,7 @@ class AppHostNamer(
     if (path.isEmpty) Activity.value(NameTree.Neg)
     else {
       val Path.Utf8(segs@_*) = path
-      val lowercasePath = Path.Utf8(segs.map(_.toLowerCase): _*)
+      val lowercasePath = Path.Utf8(segs.map(_.replaceAll(":\\d{1,}$", "").toLowerCase): _*)
       // each time the map of all Apps updates, find the
       // shortest-matching part of `path` that exists as an App ID.
       val possibleIds = (1 to lowercasePath.size).map(lowercasePath.take(_))
